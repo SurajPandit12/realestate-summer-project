@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+<body>
+
+
+   <section class="form-container">
+      <form id="loginForm" action="login.php" method="POST">
+          <h3>Login Account</h3>
+          <input type="email" name="email" required maxlength="50" placeholder="Enter your email" class="box">
+          <input type="password" name="password" required maxlength="20" placeholder="Enter your password" class="box">
+          <p>Don't have an account? <a href="register.html">Register now</a></p>
+          <input type="hidden" name="redirect" id="redirect" value="home.html"> <!-- Default value -->
+          <input type="submit" value="Login now" name="submit" class="btn">
+      </form>
+  </section>
+  
+  <script>
+      window.onload = function() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const redirect = urlParams.get('redirect');
+          if (redirect) {
+              document.getElementById('redirect').value = redirect;
+          }
+      };
+  </script>
+  
+<!-- <script>
+   document.getElementById('loginForm').onsubmit = function(event) {
+       event.preventDefault();
+       // Simulate successful login
+       let email = document.querySelector('input[name="email"]').value;
+       sessionStorage.setItem('authenticated', 'true');
+       sessionStorage.setItem('userEmail', email);
+       window.location.href = 'home.html';
+   }
+</script> -->
+
+ <!-- <script>
+   document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Simulate successful login
+      localStorage.setItem('isLoggedIn', 'true');
+      window.location.href = 'view_property.html';
+   });
+   </script>
+   -->
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

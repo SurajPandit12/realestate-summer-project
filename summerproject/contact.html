@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header class="header">
+
+   <nav class="navbar nav-1">
+      <section class="flex">
+         <a href="home.html" class="logo"><i class="fa-sharp fa-solid fa-house fa-flip" style="color: #c4213a;"></i>Unlock Your Dream Home</a>
+
+         <ul>
+            <li><a href="admin/dashboard.html">MyAdmin</a></li>
+            
+         </ul>
+      </section>
+   </nav>
+
+   <nav class="navbar nav-2">
+      <section class="flex">
+         <div id="menu-btn" class="fas fa-bars"></div>
+
+         <div class="menu">
+            <ul>
+               <li><a href="#">Buy<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="house.html">House</a></li>
+                     <li><a href="buyland.html">Land</a></li>
+                  </ul>
+               </li>
+               <li><a href="#">Sell<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="sell.html">House</a></li>
+                     <li><a href="sellland.html">Land</a></li>
+                  </ul>
+               </li>
+               <li><a href="Rent.html">Rent</a>
+               </li>
+                     <li><a href="about.html">About us</a></i></li>
+                     <li><a href="contact.html">Contact us</a></i></li>
+                     <li><a href="contact.html#faq">FAQs</a></i></li>
+            </ul>
+         </div>
+
+         <ul>
+            <li>
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="register.html">Register</a></li>
+            
+            </li>
+         </ul>
+
+
+
+      </section>
+   </nav>
+
+</header>
+
+
+<!-- header section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact">
+
+   <div class="row">
+     
+      <form action="save_contact.php" method="post">
+
+         <h3>get in touch</h3>
+         <input type="text" name="name" required maxlength="50" placeholder="enter your name" class="box">
+         <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
+         <input type="number" name="number" required maxlength="10" max="9999999999" min="0" placeholder="enter your number" class="box">
+         <textarea name="message" placeholder="enter your message" required maxlength="1000" cols="30" rows="10" class="box"></textarea>
+         <input type="submit" value="send message" name="send" class="btn">
+      </form>
+   </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- faq section starts  -->
+
+<section class="faq" id="faq">
+
+   <h1 class="heading">FAQ</h1>
+
+   <div class="box-container">
+
+      <div class="box active">
+         <h3><span>how to own a property?</span><i class="fas fa-angle-down"></i></h3>
+         <p></p>
+      </div>
+
+      <div class="box active">
+         <h3><span>when will I get the possession?</span><i class="fas fa-angle-down"></i></h3>
+         <p></p>
+      </div>
+
+      <div class="box">
+         <h3><span>where can I see owner?</span><i class="fas fa-angle-down"></i></h3>
+         <p></p>
+      </div>
+
+      <div class="box">
+         <h3><span>how to contact with the buyers?</span><i class="fas fa-angle-down"></i></h3>
+         <p></p>
+      </div>
+
+      <div class="box">
+         <h3><span>How to enlist my property?</span><i class="fas fa-angle-down"></i></h3>
+         <p></p>
+      </div>
+
+      <div class="box">
+         <h3><span>how to promote my listing?</span><i class="fas fa-angle-down"></i></h3>
+         <p></p>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- faq section ends -->
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section class="flex">
+
+      <div class="box">
+         <a href="#"><i class="fas fa-phone"></i><span>9863031182</span></a>
+         <a href="#"><i class="fas fa-phone"></i><span>014256812</span></a>
+         <a href="#"><i class="fas fa-envelope"></i><span>projectsuraj@gmail.com</span></a>
+         <a href="#"><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Minbhawan</span></a>
+      </div>
+
+      <div class="box">
+         <a href="home.html"><span>MYHome</span></a>
+         <a href="about.html"><span>About</span></a>
+         <a href="contact.html"><span>Contact</span></a>
+         <a href="listings.html"><span>All listings</span></a>
+      </div>
+
+      <div class="box">
+         <a href="#"><span>facebook</span><i class="fa-brands fa-facebook" style="color: #74C0FC;"></i></a>
+         <a href="#"><span>twitter</span><i class="fa-brands fa-twitter" style="color: #74C0FC;"></i></a>
+         <a href="#"><span>linkedin</span><i class="fa-brands fa-linkedin"></i></a>
+         <a href="#"><span>instagram</span><i class="fa-brands fa-instagram" style="color: #cc1958;"></i></a>
+
+      </div>
+
+   </section>
+
+   <div class="credit">&copy; Copyright @ 2024 by Suraj Pandit | All rights reserved.</div>
+
+</footer>
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"> 
+</script>
+
+</body>
+</html>

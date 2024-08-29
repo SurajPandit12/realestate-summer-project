@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sell Your Land</title>
+   <!-- Font Awesome CDN link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+   <!-- Custom CSS file link -->
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #f4f4f4;
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      .container {
+         max-width: 800px;
+         margin: 25px 0 25px calc(50% - 400px);
+         padding: 20px;
+         background-color: #fff;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .header {
+         text-align: center;
+         margin-bottom: 30px;
+      }
+      .header h1 {
+         font-size: 36px;
+         color: #333;
+         margin-bottom: 10px;
+      }
+      .form-group {
+         margin-bottom: 20px;
+      }
+      label {
+         display: block;
+         font-size: 18px;
+         color: #555;
+         margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="number"],
+      textarea,
+      select {
+         width: 100%;
+         padding: 10px;
+         font-size: 16px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         box-sizing: border-box;
+      }
+      select {
+         appearance: none;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         background: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.7 6.3l-6-6c-.4-.4-1-.4-1.4 0l-6 6c-.4.4-.4 1 0 1.4s1 .4 1.4 0L10 3.4V18c0 .6.4 1 1 1s1-.4 1-1V3.4l4.3 4.3c.2.2.4.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4z"/></svg>') no-repeat right 10px center;
+         padding-right: 30px;
+      }
+      .btn {
+         display: inline-block;
+         padding: 12px 20px;
+         background-color: #c4213a;
+         color: #fff;
+         font-size: 18px;
+         text-decoration: none;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+      .btn:hover {
+         background-color: #a31a2b;
+      }
+   </style>
+</head>
+<body style="margin-top: 20px;">
+   <header class="header">
+      <nav class="navbar nav-1">
+         <section class="flex">
+            <a href="home.html" class="logo"><i class="fa-sharp fa-solid fa-house fa-flip" style="color: #c4213a;"></i>MyHome</a>
+         </section>
+      </nav>
+      <nav class="navbar nav-2">
+         <section class="flex">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div class="menu">
+               <ul>
+                  <li><a href="#">Buy<i class="fas fa-angle-down"></i></a>
+                     <ul>
+                        <li><a href="house.html">House</a></li>
+                        <li><a href="buyland.html">Land</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="">Sell<i class="fas fa-angle-down"></i></a>
+                     <ul>
+                        <li><a href="sell.html">House</a></li>
+                        <li><a href="sellland.html">Land</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="Rent.html">Rent</a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="contact.html#faq">FAQs</a></li>
+               </ul>
+            </div>
+            <ul>
+               <li>
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="register.html">Register</a></li>
+               </li>
+            </ul>
+         </section>
+      </nav>
+   </header>
+   
+   <div class="container">
+      <h1>Sell Your Land</h1>
+      <form action="store_land.php" method="post" enctype="multipart/form-data">
+         <div class="form-group">
+            <label for="land_name">Land Name:</label>
+            <input type="text" id="land_name" name="land_name" required>
+         </div>
+         <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+         </div>
+         <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required>
+         </div>
+         <div class="form-group">
+            <label for="owner">Owner:</label>
+            <input type="text" id="owner" name="owner" required>
+         </div>
+         <div class="form-group">
+            <label for="land_type">Land Type:</label>
+            <select id="land_type" name="land_type" required>
+               <option value="residential">Residential</option>
+               <option value="commercial">Commercial</option>
+               <option value="agricultural">Agricultural</option>
+               <option value="industrial">Industrial</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+         </div>
+         <div class="form-group">
+            <label for="land_images">Land Images (at least 4):</label>
+            <input type="file" id="land_images" name="land_images[]" >
+         </div>
+         <input type="submit" name="sell_land" value="Sell Land" class="btn">
+      </form>
+   </div>
+
+   <footer class="footer">
+      <section class="flex">
+         <div class="box">
+            <a href="#"><i class="fas fa-phone"></i><span>9863031182</span></a>
+            <a href="#"><i class="fas fa-phone"></i><span>014256812</span></a>
+            <a href="#"><i class="fas fa-envelope"></i><span>projectsuraj@gmail.com</span></a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Minbhawan</span></a>
+         </div>
+         <div class="box">
+            <a href="home.html"><span>MYHome</span></a>
+            <a href="about.html"><span>About</span></a>
+            <a href="contact.html"><span>Contact</span></a>
+            <a href="listings.html"><span>All listings</span></a>
+         </div>
+         <div class="box">
+            <a href="#"><span>facebook</span><i class="fa-brands fa-facebook" style="color: #74C0FC;"></i></a>
+            <a href="#"><span>twitter</span><i class="fa-brands fa-twitter" style="color: #74C0FC;"></i></a>
+            <a href="#"><span>linkedin</span><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><span>instagram</span><i class="fa-brands fa-instagram" style="color: #cc1958;"></i></a>
+         </div>
+      </section>
+      <div class="credit">&copy; Copyright @ 2024 by Suraj Pandit | All rights reserved.</div>
+   </footer>
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
+</body>
+</html>

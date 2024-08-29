@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home</title>
+
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+
+.hero {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background: url('images/hero-image.jpg') no-repeat center center/cover;
+   display: flex;
+   align-items: flex-end; 
+   justify-content: flex-start; 
+}
+
+.hero .overlay {
+   position: absolute;
+   bottom: 0; 
+   left: 0; 
+   width: 100%;
+   padding: 20px; 
+   
+   text-align: left;
+}
+
+.hero h1 {
+   color: rgba(255, 255, 255, 0.8);
+   font-size: 4rem;
+   font-family: 'Poppins', sans-serif; 
+   max-width: 800px;
+   margin: 20px;
+   line-height: 1.2;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   animation: colorChange 5s infinite alternate; 
+   border: 0px solid rgba(255, 255, 255, 0.5); 
+   border-radius: 10px; 
+   background: rgba(255, 255, 255, 0.1); 
+   padding: 20px; 
+}
+
+
+@keyframes colorChange {
+   0% { color: #ffeb3b; }
+   50% { color: #ff9800; }
+   100% { color: #f44336; }
+}
+
+
+@media (max-width: 768px) {
+   .hero h1 {
+      font-size: 3rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .hero h1 {
+      font-size: 2rem;
+   }
+}
+
+
+
+   </style>
+
+</head>
+<body>
+
+<header class="header">
+   <nav class="navbar nav-1">
+      <section class="flex">
+         <a href="home.html" class="logo"><i class="fa-sharp fa-solid fa-house fa-flip" style="color: #c4213a;"></i>Unlock Your Dream Home</a>
+         <ul>
+            <li><a href="admin/dashboard.php">MyAdmin</a></li>
+         </ul>
+      </section>
+   </nav>
+
+   <nav class="navbar nav-2">
+      <section class="flex">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div class="menu">
+            <ul>
+               <li><a href="#">Buy<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="house.html">House</a></li>
+                     <li><a href="buyland.html">Land</a></li>
+                  </ul>
+               </li>
+               <li><a href="#">Sell<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="sell.html">House</a></li>
+                     <li><a href="sellland.html">Land</a></li>
+                  </ul>
+               </li>
+               <li><a href="Rent.html">Rent</a></li>
+               <li><a href="about.html">About us</a></i></li>
+               <li><a href="contact.html">Contact us</a></i></li>
+               <li><a href="contact.html#faq">FAQs</a></i></li>
+            </ul>
+         </div>
+         <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="logout.php">Logout</a></li>
+         </ul>
+      </section>
+   </nav>
+</header>
+
+<section class="hero">
+   <div class="overlay">
+       <h1>"Discover the joy of finding your perfect home."</h1>
+   </div>
+</section>
+
+
+<section class="listings">
+   <h1 class="heading">latest listings</h1>
+   <div class="box-container">
+      <div class="box">
+         <div class="admin">
+            <h3>A</h3>
+            <div>
+               <p>AdminNCC</p>
+               <span>05-11-2025</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+            <p class="type"><span>flat</span><span>sale</span></p>
+            <img src="images/flat1.jpg" alt="">
+         </div>
+         <h3 class="name">Modern flat available</h3>
+         <p class="location"><i class="fas fa-map-marker-alt"></i><span>Kalanki, Kathmandu</span></p>
+         <button class="btn" onclick="location.href='login.html?redirect=view_property.php'">Show Details</button>
+      </div>
+      <div class="box">
+         <div class="admin">
+            <h3>S</h3>
+            <div>
+               <p>SurajNcc</p>
+               <span>1-11-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+            <p class="type"><span>flat</span><span>sale</span></p>
+            <img src="images/flat2.jpg" alt="">
+         </div>
+         <h3 class="name">modern flats and appartments</h3>
+         <p class="location"><i class="fas fa-map-marker-alt"></i><span>gongabu, kathmandu</span></p>
+         <button class="btn" onclick="location.href='login.html?redirect=view_property.php'">Show Details</button>
+      </div>
+      <div class="box">
+         <div class="admin">
+            <h3>A</h3>
+            <div>
+               <p>AdminNcc</p>
+               <span>05-01-2024</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
+            <p class="type"><span>house</span><span>sale</span></p>
+            <img src="images/house1.jpg" alt="Not available">
+         </div>
+         <h3 class="name">Modern house for sale</h3>
+         <p class="location"><i class="fas fa-map-marker-alt"></i><span>Balaju-08, kathmandu</span></p>
+         <button class="btn" onclick="location.href='login.html?redirect=view_property.php'">Show Details</button>
+      </div>
+   </div>
+   <div style="margin-top: 2rem; text-align:center;">
+      <a href="listings.html" class="inline-btn">Show all houses</a>
+   </div>
+</section>
+
+<section class="services">
+   <h1 class="heading">Our services</h1>
+   <div class="box-container">
+      <div class="box">
+         <img src="images/Ps.jpg" alt="loading">
+         <h3>Buy house</h3>
+         <p>"Discover your dream home with our expert assistance. Find the perfect house that meets your needs and preferences. Our team will guide you through the buying process, ensuring a smooth and enjoyable experience from search to closing."</p>
+      </div>
+      <div class="box">
+         <img src="images/rent.JPG" alt="">
+         <h3>rent house</h3>
+         <p>"Explore a range of rental properties tailored to your lifestyle. Whether you're looking for a cozy apartment,townhouse,family-friendly home, we have options to suit every need.Ensuring a seamless renting process from start to finish."</p>
+      </div>
+      <div class="box">
+         <img src="images/sell.jpg" alt="">
+         <h3>sell house</h3>
+         <p>"Sell your home effortlessly with our dedicated team. Benefit from our market expertise and personalized guidance. We'll work everyday tirelessly to secure the best deal for you,to ensuring a seamless selling process from start to finish and thereafter."</p>
+      </div>
+      <div class="box">
+         <img src="images/flat.jpg" alt="">
+         <h3>flats and buildings</h3>
+         <p>"Discover a variety of rental flats and commercial buildings with us. We offer a diverse selection of options according to need. Find the perfect flat or building that suits lifestyle or business needs with our expert assistance."</p>
+      </div>
+      <div class="box">
+         <img src="images/mall.jpg" alt="">
+         <h3>shops and malls</h3>
+         <p>"Explore prime retail spaces in popular shopping malls.Find the perfect location to showcase your brand and attract customers according your desire. Let us assist you in securing a space in a bustling shopping environment."</p>
+      </div>
+      <div class="box">
+         <img src="images/24.jpg" alt="">
+         <h3>24/7 service</h3>
+         <p>"Access our real estate services 24/7 for seamless support in buying, selling, or renting properties. Whether you're a buyer, seller, or tenant, our dedicated team is available round the clock to assist you with your real estate needs."</p>
+      </div>
+   </div>
+</section>
+
+<footer class="footer">
+   <section class="flex">
+      <div class="box">
+         <a href="#"><i class="fas fa-phone"></i><span>9863031182</span></a>
+         <a href="#"><i class="fas fa-phone"></i><span>014256812</span></a>
+         <a href="#"><i class="fas fa-envelope"></i><span>projectsuraj@gmail.com</span></a>
+         <a href="#"><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Minbhawan</span></a>
+      </div>
+      <div class="box">
+         <a href="home.html"><span>MYHome</span></a>
+         <a href="about.html"><span>About</span></a>
+         <a href="contact.html"><span>Contact</span></a>
+         <a href="listings.html"><span>All listings</span></a>
+      </div>
+      <div class="box">
+         <a href="#"><span>facebook</span><i class="fa-brands fa-facebook" style="color: #74C0FC;"></i></a>
+         <a href="#"><span>twitter</span><i class="fa-brands fa-twitter" style="color: #74C0FC;"></i></a>
+         <a href="#"><span>linkedin</span><i class="fa-brands fa-linkedin"></i></a>
+         <a href="#"><span>instagram</span><i class="fa-brands fa-instagram" style="color: #cc1958;"></i></a>
+      </div>
+   </section>
+   <div class="credit">&copy; Copyright @ 2024 by Suraj Pandit | All rights reserved.</div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
